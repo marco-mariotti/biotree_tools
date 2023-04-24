@@ -17,16 +17,16 @@ requirements:
     - python >=3.6
   run:
     - python >=3.6
-    - easyterm  >=1.0.0
-    - numpy  >=1.17
+    # - easyterm  >=1.0.0
+    # - numpy  >=1.17
     - ncbi_db >=0.1.1
-    - gawk
-    - blast
-    - mafft
-    - ete3 ==3.1.1
-    - biopython 
-    - trimal
-    - brewer2mpl
+    # - gawk
+    # - blast
+    # - mafft
+    # - ete3 ==3.1.1
+    # - biopython 
+    # - trimal
+    # - brewer2mpl
 
 entry_points:
     - alignment_tools = biotree_tools.alignment_tools:main
