@@ -1,11 +1,12 @@
 import sys
 from .MMlib3 import nogap, printerr, write, symmetrical_dict
 try:  
-  from PyQt5 import QtCore, QtGui, QtWidgets
   from ete3 import faces
-except: 
-  printerr('ERROR PyQt5 and ete3 must be installed to use this program!', 1)
-  raise 
+  from PyQt5 import QtCore, QtGui, QtWidgets
+except:
+  pass
+  #printerr('ERROR PyQt5 and ete3 must be installed to use this program!', 1)
+  #raise 
 
 
 def distance_matrix_from_tree(root):

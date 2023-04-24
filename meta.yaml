@@ -1,9 +1,6 @@
-{% set name = "PACKAGENAME" %}
-{% set version = load_setup_py_data().version %}
-
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name:    {{ name }}
+  version: {{ version }}
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
@@ -21,18 +18,21 @@ requirements:
   run:
     - python >=3.6
     - easyterm  >=1.0.0
-    - ncbi_db 
+    - numpy  >=1.17
+    - ncbi_db >=0.1.1
     - gawk
     - blast
     - mafft
-    - ete3 == 3.1.1
-    - biopython >=1.46
+    - ete3 ==3.1.1
+    - biopython 
     - trimal
     - brewer2mpl
 
 entry_points:
     - alignment_tools = biotree_tools.alignment_tools:main
-
+    - tree_tools = biotree_tools.tree_tools:main
+    - phylo_context = biotree_tools.phylo_context:main
+    - show_tree = biotree_tools.show_tree:main
 
 about:
   home: "https://github.com/marco-mariotti/{{ name }}"
