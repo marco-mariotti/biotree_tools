@@ -4,11 +4,12 @@ Collection of bioinformatics tools related to alignments and phylogenetic trees
 ## Installation
 
 Temporary way:
-conda create -y -n btt
+```conda create -y -n btt
 conda activate btt
 conda install -y -c etetoolkit ete3==3.1.1 ete_toolchain
 conda install -y -c mmariotti -c conda-forge -c etetoolkit easyterm gawk blast mafft trimal brewer2mpl ncbi_db
 conda install -y -c mmariotti biotree_tools
+```
 
 ## Tools
 - **alignment_tools**  utility to manipulate (reformat, subset, trim...) multiple sequence alignments
